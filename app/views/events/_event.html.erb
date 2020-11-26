@@ -1,8 +1,11 @@
 <div class="card">
   <div class="event">
     <% event.images.each do |image| %>
-      <%= image_tag image, class:'images' %>
+      <%= image_tag image, class:'images', class:  :home_image %>
       <% break %>
+    <% end %>
+    <%event.tags.each do |tag| %>
+              #<%=tag.tagname%>
     <% end %>
   </div>
   <div class="card__body">

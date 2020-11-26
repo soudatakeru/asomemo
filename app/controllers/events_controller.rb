@@ -4,24 +4,28 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
+    @event = EventsTag.new
   end
 
   def create
-    binding.pry
-    @event = Event.new(event_params)
-    if @event.save
+    @event = EventsTag.new(event_params)
+    if @event.valid?
+      @event.save
       redirect_to root_path
     else
       render :new
     end
   end
 
+  def search
+    return nil if params[:keyword] == ""
+    tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
+    render json:{ keyword: tag }
+  end
+
   private
 
   def event_params
-    params.require(:event).permit(:name, :explanation, :facility_id, :scale_id, :category_id, :volunteer, images: []).merge(user_id: current_user.id)
+    params.require(:events_tag).permit(:name, :explanation, :facility_id, :scale_id, :category_id, :volunteer, :tagname, images: []).merge(user_id: current_user.id)
   end
-
-
 end
