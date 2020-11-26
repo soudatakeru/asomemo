@@ -339,7 +339,6 @@ a {
 
 form{
 	width:600px; /*お好みで調整してください*/
-	margin:0 auto;
 }
 .inputs{
 	overflow: hidden;
@@ -392,4 +391,21 @@ textarea{
 
 .home_image{
   border-radius: 10px;
+}
+
+.child{
+  font-size: 15px;
+}
+
+.kouho{
+  text-align: center;
+    /* display: flex; */
+    margin-right: 220px;
+    border: 1px solid #e0e0e0;
+    width: 100px;
+    position: relative;
+    left: 338px;
+    border-radius: 5px;
+    /* display: inline-block; */
+    bottom: 45px;
 }

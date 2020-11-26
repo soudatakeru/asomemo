@@ -19,7 +19,7 @@
     <label class="label">タグ</label>
     <%= f.text_field :tagname, class:"input-tag" %>
   </div>
-  <div id="search-result">
+  <div class="kouho", id="search-result" >
   </div>
     
   <div class="field">
@@ -38,6 +38,7 @@
   </div>
 
   <div class="field">
+    <label class="label">画像</label>
     <%= f.file_field :images, name: 'event[images][]', id: 'event_image', class:"select-box" %>
     <div id="image-list"></div>
   </div>

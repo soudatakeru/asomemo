@@ -23,6 +23,10 @@ class EventsController < ApplicationController
     render json:{ keyword: tag }
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   private
 
   def event_params
