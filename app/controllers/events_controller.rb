@@ -19,7 +19,7 @@ class EventsController < ApplicationController
 
   def search
     return nil if params[:keyword] == ""
-    tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
+    tag = Tag.where(['tagname LIKE ?', "%#{params[:keyword]}%"] )
     render json:{ keyword: tag }
   end
 
