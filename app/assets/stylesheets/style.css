@@ -179,9 +179,9 @@ a {
   text-decoration: underline;
 }
 .prototype__image{
-  width: 40%;
   margin: 0 auto;
   padding: 16px 0;
+  display: flex;
 }
 .prototype__detail{
   display: flex;
@@ -304,6 +304,7 @@ a {
   }
   .prototype_image{
     width: 60%;
+    
   }
 }
 
@@ -391,6 +392,7 @@ textarea{
 
 .home_image{
   border-radius: 10px;
+  padding: 5px;
 }
 
 .child{
