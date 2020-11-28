@@ -7,6 +7,7 @@ class Event < ApplicationRecord
   belongs_to :category
   has_many :event_tag_relations, dependent: :destroy
   has_many :tags, through: :event_tag_relations, dependent: :destroy
+end
   # with_options presence: true do
   #   validates :name
   #   validates :explanation
@@ -20,4 +21,4 @@ class Event < ApplicationRecord
   #   validates :scale_id
   #   validates :category_id
   # end
-end
+

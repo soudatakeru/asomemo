@@ -182,6 +182,7 @@ a {
   margin: 0 auto;
   padding: 16px 0;
   display: flex;
+  justify-content: center;
 }
 .prototype__detail{
   display: flex;
@@ -410,4 +411,15 @@ textarea{
     border-radius: 5px;
     /* display: inline-block; */
     bottom: 45px;
+}
+
+.event_hedding{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.event__hedding__name{
+  padding: 0 5px;
+  border-left: solid 3px #FF6701;
 }
