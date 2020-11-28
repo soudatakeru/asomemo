@@ -1,15 +1,15 @@
 <div class="card">
   <div class="event">
     <% event.images.each do |image| %>
-      <%= image_tag image, class:'images', class:  :home_image %>
+      <%= link_to image_tag(image, class: 'images'), event_path(event.id), class:  :home_image %>
       <% break %>
     <% end %>
     <%event.tags.each do |tag| %>
-              #<%=tag.tagname%>
+      #<%=tag.tagname%>
     <% end %>
   </div>
   <div class="card__body">
-    <%= link_to event.name, root_path, class: :card__title%>
+    <%= link_to event.name, event_path(event.id), class: :card__title%>
     <p class="card__summary">
       <%= "プロトタイプのキャッチコピー" %>
     </p>

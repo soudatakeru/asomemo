@@ -2,9 +2,9 @@
   <div class="inner">
     <div class="form__wrapper">
       <span class="page-heading">
-        新規投稿
+        編集
       </span>
-          <%= form_with model: @event, url: events_path, local: true do |f| %>
+          <%= form_with model: @event, url: event_path, local: true do |f| %>
             <%= render 'shared/error_messages', model: f.object %>
             <div class="field">
             <label class="label">イベント名</label>
@@ -45,19 +45,15 @@
 
           <div class="field">
             <label class="label">画像</label>
-              <%= f.file_field :images, name: 'events_tag[images][]', id: 'event_image', class:"select-box-image" %> 
-              <div id="image-list"></div>
+            <%= f.file_field :images, name: 'event[images][]', id: 'event_image', class:"select-box-image" %>
+          <div id="image-list"></div>
           </div>
-          
 
           <div class="actions">
             <%= f.submit "保存する", class: :form__btn  %>
     
           </div>
          <% end %>
-         <%# <% @event.images.each do |image| %>
-           <%#= image_tag image, class: 'images' %>
-         <%# <% end %> 
         <%# 部分テンプレートでフォームを表示する %>
     </div>
   </div>

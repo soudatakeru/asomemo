@@ -1,0 +1,71 @@
+<main class="main">
+  <div class="inner">
+    <div class="prototype__wrapper">
+      <div class="prototype__hedding">
+          <%= @event.name %>
+      </div>
+      <div class="event_hedding">
+        <div class="event__hedding__name">
+          <%= @event.facility.name %>
+        </div>
+        <div class="event__hedding__name">
+          <%= @event.scale.name %>
+        </div>
+        <div class="event__hedding__name">
+          <%= @event.category.name %>
+        </div>
+        <div class="event__hedding__name">
+          <%= @event.volunteer %>
+        </div>
+      </div>
+       
+      <%= link_to @event.user.nickname, root_path, class: :prototype__user %>
+      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+        <div class="prototype__manage">
+          <%= link_to "編集する", edit_event_path(@event.id), class: :prototype__btn %>
+          <%= link_to "削除する", event_path(@event.id), method:  :delete, class: :prototype__btn %>
+        </div>
+      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+      <div class="prototype__image">
+        <% @event.images.each do |image| %>
+          <%= image_tag image, class:  :home_image %>
+        <% end %>
+      </div>
+      <div class="prototype__body">
+        <div style="white-space:pre-wrap", class="prototype__detail">
+          <p class="detail__title">説明</p>
+          <div class="detail__message">
+            <%= @event.explanation %>
+          </div>
+        </div>
+        <div class="prototype__detail">
+          <p class="detail__title">コンセプト</p>
+          <p class="detail__message">
+            <%= @event.facility.name %>
+          </p>
+        </div>
+      </div>
+      <div class="prototype__comments">
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+          <%# <%= form_with local: true do |f|%>
+            <div class="field">
+              <%# <%= f.label :hoge, "コメント" %><br />
+              <%# <%= f.text_field :hoge %>
+            </div>
+            <div class="actions">
+              <%# <%= f.submit "送信する", class: :form__btn  %>
+            </div>
+          <%# <% end %> 
+        <%# // ログインしているユーザーには上記を表示する %>
+        <ul class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+            <li class="comments_list">
+              <%# <%= " コメントのテキスト "%>
+              <%# <%= link_to "（ ユーザー名 ）", root_path, class: :comment_user %>
+            </li>
+          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
