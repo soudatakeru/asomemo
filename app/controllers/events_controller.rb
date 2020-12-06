@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!,only: [ :edit, :destroy, :new, :create]
+  before_action :move_to_index, except: [:index, :show, :search]
   
   def index
     @events = Event.all
@@ -20,12 +21,16 @@ class EventsController < ApplicationController
       render 'new'
     end
   end
-
+  
   def search
-    return nil if params[:keyword] == ""
-    tag = Tag.where(['tagname LIKE ?', "%#{params[:keyword]}%"] )
-    render json:{ keyword: tag }
+    @events = Event.search(params[:keyword])
   end
+
+  # def search
+  #   return nil if params[:keyword] == ""
+  #   tag = Tag.where(['tagname LIKE ?', "%#{params[:keyword]}%"] )
+  #   render json:{ keyword: tag }
+  # end
 
   def show
     @event = Event.find(params[:id])

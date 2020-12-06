@@ -22,12 +22,6 @@ class Event < ApplicationRecord
     validates :category_id
   end
 
-  # def save_tags(saveevent_tags)
-  #   saveevent_tags.each do |new_name|
-  #     event_tag = Tag.find_or_create_by(tag_name: new_name)
-  #     self.tags << event_tag
-  #   end
-  # end
   def save_tags(saveevent_tags)
     current_tags = self.tags.pluck(:tag_name) unless self.tags.nil?
     old_tags = current_tags - saveevent_tags
@@ -40,6 +34,14 @@ class Event < ApplicationRecord
     new_tags.each do |new_name|
       micropost_tag = Tag.find_or_create_by(tag_name: new_name)
       self.tags << micropost_tag
+    end
+  end
+
+  def self.search(search)
+    if search != ""
+      Event.joins(:tags).where('name LIKE ? OR tag_name LIKE ?', "%#{search}%", "%#{search}%")
+    else
+      Event.all
     end
   end
 end
