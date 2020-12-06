@@ -4,8 +4,8 @@
       <%= link_to image_tag(image, class: 'images'), event_path(event.id), class:  :home_image %>
       <% break %>
     <% end %>
-    <%event.tags.each do |tag| %>
-      #<%=tag.tagname%>
+    <% event.tags.each do |tag| %>
+      #<%= tag.tag_name %>
     <% end %>
   </div>
   <div class="card__body">

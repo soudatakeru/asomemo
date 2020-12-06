@@ -17,6 +17,9 @@
         <div class="event__hedding__name">
           <%= @event.volunteer %>
         </div>
+        <% @event.tags.each do |tag| %>
+          #<%= tag.tag_name %>
+        <% end %>
       </div>
        
       <%= link_to @event.user.nickname, user_path(@event.user), class: :prototype__user %>
