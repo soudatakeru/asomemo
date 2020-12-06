@@ -20,13 +20,9 @@
             <label class="label">ボランティア（任意)</label>
             <%= f.text_area :volunteer, class: :form__text %>
           </div>
-
-          <div class="field", id='tag-field'>
-            <label class="label">タグ</label>
-            <%= f.text_field :tagname, class:"input-tag" %>
-          </div>
-            <div class="kouho", id="search-result" >
-            </div>
+          <label class="label">タグ（任意)</label>
+          <%= f.text_field :tag_ids, class: "form-control", id:'tag_ids',\
+            placeholder: "複数つけるには','で区切ってください。" %>
     
           <div class="field">
             <label class="label">施設種類</label>
@@ -45,7 +41,7 @@
 
           <div class="field">
             <label class="label">画像</label>
-              <%= f.file_field :images, name: 'events_tag[images][]', id: 'event_image', class:"select-box-image" %> 
+              <%= f.file_field :images, name: 'event[images][]', id: 'event_image', class:"select-box-image" %> 
               <div id="image-list"></div>
           </div>
           

@@ -6,19 +6,18 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = EventsTag.new
+    @event = Event.new
   end
+  
   def create
-    
-    @event = EventsTag.new(event_params)
-    # binding.pry
-    if @event.valid?
-      #binding.pry
-      @event.save
-      
-      redirect_to root_path
+    @event = current_user.events.build(event_params)
+    tag_list = params[:event][:tag_ids].split(',')
+    if @event.save
+      @event.save_tags(tag_list)
+      flash[:success] = '投稿しました!'
+      redirect_to root_url
     else
-      render :new
+      render 'new'
     end
   end
 
@@ -32,21 +31,23 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @comment = Comment.new
     @comments = @event.comments.includes(:user)
+
   end
 
   def edit
-    @event = EventsTag.find(params[:id])
-     unless @event.user_id == current_user.id
-       redirect_to action: :index
-     end
+    @event = Event.find(params[:id])
+    @tag_list =@event.tags.pluck(:tag_name).join(",")
   end
 
   def update
-    event = EventsTag.new()
-    if event.update(event_params)
-    redirect_to event_path
+    @event = Event.find(params[:id])
+    tag_list = params[:event][:tag_names].to_s.split(',')
+    if @event.update_attributes(event_params)
+      @event.save_tags(tag_list)
+      flash[:success] = '投稿を編集しました‼'
+      redirect_to @event
     else
-    render :show
+    render 'edit'
     end
   end
 
@@ -60,7 +61,11 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:events_tag).permit(:name, :explanation, :facility_id, :scale_id, :category_id, :volunteer, :tagname, images: []).merge(user_id: current_user.id)
+    params.require(:event).permit(:name, :explanation, :facility_id, :scale_id, :category_id, :volunteer, images: []).merge(user_id: current_user.id)
+  end
+
+  def tag_params
+    params.require(:event).permit(:tag_names)
   end
 
   # def event_params2
