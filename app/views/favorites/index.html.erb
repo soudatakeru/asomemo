@@ -1,0 +1,9 @@
+<h2>参加中のイベント</h2>
+    <% @favorites.each do |favorite| %>
+      <% event = Event.find(favorite.event_id) %>
+            <div class="name3"><%= link_to event.event_name, event_path(event) %></div>
+            <div class="name2"><%= link_to "参加中のイベントから削除",favorite_path(favorite), method: :delete %></div>
+
+    <br />
+    <% end %>
+</div>

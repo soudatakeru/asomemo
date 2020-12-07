@@ -425,3 +425,7 @@ textarea{
   padding: 0 5px;
   border-left: solid 3px #FF6701;
 }
+
+.form-control{
+  width: 280px;
+}
