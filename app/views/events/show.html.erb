@@ -1,9 +1,15 @@
 <main class="main">
   <div class="inner">
     <div class="prototype__wrapper">
-      <div>
-      <%= link_to "このイベントをクリップ", add_event_path(@event), method: :post %>
+      <div class="favorite">
+      <%= link_to "お気に入りに追加", add_event_path(@event), method: :post %>
+        
       </div>
+        <%# <%= flash[:notice] %>
+        <%# <%= flash[:aleat] %> 
+        <% flash.each do |key, value| %>
+          <p><%= value %><p>
+        <% end %>
       <div class="prototype__hedding">
           <%= @event.name %>
       </div>
@@ -20,13 +26,17 @@
         <div class="event__hedding__name">
           <%= @event.volunteer %>
         </div>
-        <div class="event__hedding__name">
+        <div class="event__hedding__right">
           <%= @event.facility.name %>
         </div>
       </div>
-       <% @event.tags.each do |tag| %>
-          #<%= tag.tag_name %>
-        <% end %>
+      <div class="event_hedding">
+        <div class="event__hedding__tag">
+          <% @event.tags.each do |tag| %>
+            #<%= tag.tag_name %>
+          <% end %>
+        </div>
+      </div>
       <%= link_to @event.user.nickname, user_path(@event.user), class: :prototype__user %>
       <% if user_signed_in? && current_user.id == @event.user_id %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
@@ -47,12 +57,6 @@
           <div class="detail__message">
             <%= @event.explanation %>
           </div>
-        </div>
-        <div class="prototype__detail">
-          <p class="detail__title">コンセプト</p>
-          <p class="detail__message">
-            
-          </p>
         </div>
       </div>
       <div class="prototype__comments">

@@ -386,8 +386,14 @@ textarea{
 	border-radius: 10px;
 }
 
-.logo_in{
-  top: 20px;
+.logo_main{
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.logo_sub{
+  top: 40px;
   padding: 10px;
   border-radius: 15px;
   position: relative;
@@ -426,6 +432,27 @@ textarea{
   border-left: solid 3px #FF6701;
 }
 
+.event__hedding__right{
+  padding: 0 5px;
+  border-right: solid 3px #FF6701;
+}
+
+.event__hedding__tag{
+  padding: 0 5px;
+  border-right: solid 3px #FF6701;
+  border-left: solid 3px #FF6701;
+}
 .form-control{
   width: 280px;
+}
+
+.favorite{
+  border: solid 3px #FF6701;
+  border-radius: 5px;
+  width: 14%;
+}
+
+.favorite__main{
+  width: 1024px;
+  margin: 0 auto;
 }

@@ -14,21 +14,33 @@
     <header class="header">
       <div class="inner">
         <div class="nav">
-          <div class="nav__left">
-            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          
+          <% if user_signed_in? %>
+            <div class="nav__left"> 
+              <%= link_to image_tag("logo9.png", class: :logo_sub), favorites_path(current_user) %>
+              <%= link_to image_tag("logo8.png", class: :logo_sub), user_path(current_user.id), class: :greeting__link%> 
+            </div> 
+          <% else %>
+            <div class="nav__left"> 
+              <%= link_to image_tag("logo9.png", class: :logo_sub), root_path %>
+              <%= link_to image_tag("logo8.png", class: :logo_sub), root_path %>
+            </div> 
+          <% end %>
+          <div class="nav__main">
+            <%= link_to image_tag("logo.png", class: :logo_main), root_path %>
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
           <% if user_signed_in? %>
              <div class="nav__right"> 
-               <%= link_to image_tag("logo6.png", class: :logo_in), destroy_user_session_path, method:  :delete %>
-               <%= link_to image_tag("logo7.png", class: :logo_in), new_event_path %>
+               <%= link_to image_tag("logo6.png", class: :logo_sub), destroy_user_session_path, method:  :delete %>
+               <%= link_to image_tag("logo7.png", class: :logo_sub), new_event_path %>
              </div> 
           <%# // ログインしているときは上記を表示するようにしましょう %>
           <%# ログインしていないときは以下を表示するようにしましょう %>
           <% else %>
             <div class="nav__right">
-              <%= link_to image_tag("logo3.png", class: :logo_in), new_user_session_path %>
-              <%= link_to image_tag("logo5.png", class: :logo_in), new_user_registration_path %>
+              <%= link_to image_tag("logo3.png", class: :logo_sub), new_user_session_path %>
+              <%= link_to image_tag("logo5.png", class: :logo_sub), new_user_registration_path %>
             </div>
           <% end %>
           <%# // ログインしていないときは上記を表示するようにしましょう %>

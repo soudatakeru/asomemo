@@ -1,18 +1,15 @@
 <div class="card">
   <div class="event">
+    <%= link_to event.name, event_path(event.id), class: :card__title%>
     <% event.images.each do |image| %>
       <%= link_to image_tag(image, class: 'images'), event_path(event.id), class:  :home_image %>
       <% break %>
     <% end %>
-    <% event.tags.each do |tag| %>
-      #<%= tag.tag_name %>
-    <% end %>
   </div>
   <div class="card__body">
-    <%= link_to event.name, event_path(event.id), class: :card__title%>
-    <p class="card__summary">
-      <%= "プロトタイプのキャッチコピー" %>
-    </p>
+    <% event.tags.each do |tag| %>
+      #<%= link_to tag.tag_name,event_path(event.id) %>
+    <% end %>
     <%= link_to event.user.nickname, root_path, class: :card__user %>
   </div>
 </div>

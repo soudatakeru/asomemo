@@ -13,9 +13,10 @@ class FavoritesController < ApplicationController
 
 
       if @favorite.save
-        binding.pry
-        redirect_to user_path(current_user)
+        #flash[:notice] = "お気に入りに登録しました"
+        redirect_to event_path, notice: "お気に入りに登録しました"
        else
+        flash[:aleat] = "既に登録されています"
          redirect_to event_path
       end
 
@@ -29,7 +30,7 @@ class FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.find(params[:id])
     if @favorite.destroy
-      redirect_to user_path(current_user)
+      redirect_to favorites_path(current_user)
     end
   end
 end

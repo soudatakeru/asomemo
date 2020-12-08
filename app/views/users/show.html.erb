@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= "ユーザー名さんの情報"%>
+        <%= "#{current_user.nickname}さんの情報"%>
       </h2>
       <table class="table">
         <tbody>
@@ -21,7 +21,7 @@
         </tbody>
       </table>
       <h2 class="page-heading">
-        <%= "ユーザー名さんのプロトタイプ"%>
+        <%= "#{current_user.nickname}さんの投稿"%>
       </h2>
       <div class="user__card">
         <%= render partial: 'events/event', collection: @events %>
