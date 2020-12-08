@@ -8,6 +8,9 @@ class Event < ApplicationRecord
   has_many :event_tag_relations, dependent: :destroy
   has_many :tags, through: :event_tag_relations, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :favorites
+  has_many :users, through: :favorites
+
 
   with_options presence: true do
     validates :name

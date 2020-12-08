@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!,only: [ :edit, :destroy, :new, :create]
-  before_action :move_to_index, except: [:index, :show, :search]
+  # before_action :move_to_index, except: [:index, :show, :search]
   
   def index
     @events = Event.all
@@ -36,8 +36,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @comment = Comment.new
     @comments = @event.comments.includes(:user)
-
-  end
+  end 
 
   def edit
     @event = Event.find(params[:id])

@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= "ユーザー名さんの情報"%>
+        <%= "#{current_user.nickname}さんの情報"%>
       </h2>
       <table class="table">
         <tbody>
@@ -21,11 +21,16 @@
         </tbody>
       </table>
       <h2 class="page-heading">
-        <%= "ユーザー名さんのプロトタイプ"%>
+        <%= "#{current_user.nickname}さんの投稿"%>
       </h2>
       <div class="user__card">
         <%= render partial: 'events/event', collection: @events %>
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+        <% if @favorite_list.present? %> 
+          <% @favorite_list.each do |event| %>
+            <%= link_to event.name, event_path(event.id) %>
+          <% end %>
+        <% end %> 
       </div>
     </div>
   </div>
