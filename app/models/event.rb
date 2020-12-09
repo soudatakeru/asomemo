@@ -43,6 +43,7 @@ class Event < ApplicationRecord
   def self.search(search)
     if search != ""
       Event.joins(:tags).where('name LIKE ? OR tag_name LIKE ?', "%#{search}%", "%#{search}%")
+      #binding.pry
     else
       Event.all
     end

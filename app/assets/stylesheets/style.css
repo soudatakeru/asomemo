@@ -38,7 +38,7 @@ a {
 
 .header {
   background-color: #FF6701;
-  margin-bottom: 48px;
+  margin-bottom: 10px;
   padding: 20px 0;
 
 }
@@ -90,6 +90,10 @@ a {
 
 .form__text {
   width: 50%;
+}
+
+.search-form{
+  width: auto;
 }
 
 .field{
@@ -189,6 +193,9 @@ a {
   align-items: center;
   flex-direction: column;
   margin-bottom: 8px;
+  border-left: solid 3px #FF6701;
+  border-right: solid 3px #FF6701;
+  word-break: break-word;
 }
 .detail__title{
   font-size: 20px;
@@ -455,4 +462,8 @@ textarea{
 .favorite__main{
   width: 1024px;
   margin: 0 auto;
+}
+
+.explanation{
+  width: 100px;
 }

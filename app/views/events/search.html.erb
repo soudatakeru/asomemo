@@ -1,9 +1,24 @@
-<%= form_with(url: search_events_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
-<% end %>
-<div class="contents row">
-  <% @events.each do |event| %>
-    <%= render partial: "event", locals: { event: event } %>
+<%= form_with(url: search_tag_events_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "タイトル・タグ検索", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
   <% end %>
-</div>
+  <%= search_form_for @p, url: events_search_path do |f| %>
+    <%= f.collection_select(:facility_id_eq, Facility.all, :id, :name, {}, {class:"select-box"}) %> 
+    <%= f.collection_select(:scale_id_eq, Scale.all, :id, :name, {}, {class:"select-box"}) %> 
+    <%= f.collection_select(:category_id_eq, Category.all, :id, :name, {}, {class:"select-box"}) %>
+    <%= f.submit "検索", class: "search-btn" %>
+  <% end %>
+<div class="card__wrapper">
+  <% if @results.length !=0 %>
+    <% @results.each do |result| %>
+      <li>
+        <%= link_to result.name, event_path(result.id) %>
+        <% result.images.each do |image| %>
+          <%= link_to image_tag(image, class: 'images'), event_path(result.id), class:  :home_image %>
+          <% break %>
+        <% end %>
+      </li>
+    <% end %>
+  <% else %>
+    該当するイベントはありません
+  <% end %>

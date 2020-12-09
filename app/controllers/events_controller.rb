@@ -1,9 +1,11 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!,only: [ :edit, :destroy, :new, :create]
-  # before_action :move_to_index, except: [:index, :show, :search]
+  before_action :search_event, only: [:index, :search]
   
   def index
     @events = Event.all
+    # set_event_column
+    # set_category_column
   end
 
   def new
@@ -23,6 +25,11 @@ class EventsController < ApplicationController
   end
   
   def search
+    @results = @p.result
+    #binding.pry
+  end
+
+  def search_tag
     @events = Event.search(params[:keyword])
   end
 
@@ -72,7 +79,13 @@ class EventsController < ApplicationController
     params.require(:event).permit(:tag_names)
   end
 
-  # def event_params2
-  #   params.require(:event).permit(:name, :explanation, :facility_id, :scale_id, :category_id, :volunteer, images: []).merge(user_id: current_user.id, tag: params[:tagname])
+  def search_event
+    @p = Event.ransack(params[:q])
+  end
+
+
+  # def set_category_column
+  #   @category_name = Category.all
   # end
+  
 end
