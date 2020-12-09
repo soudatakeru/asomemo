@@ -5,21 +5,15 @@ class FavoritesController < ApplicationController
   end
 
   def create
-
-
     @user_id = current_user.id
     @event_id = Event.find(params[:id]).id
     @favorite = Favorite.new(event_id: @event_id, user_id: @user_id)
-
-
-      if @favorite.save
-        #flash[:notice] = "お気に入りに登録しました"
-        redirect_to event_path, notice: "お気に入りに登録しました"
-       else
-        flash[:aleat] = "既に登録されています"
-         redirect_to event_path
-      end
-
+    if @favorite.save
+      redirect_to event_path, notice: "お気に入りに登録しました"
+    else
+      flash[:aleat] = "既に登録されています"
+      redirect_to event_path
+    end
   end
 
   def show_favorites

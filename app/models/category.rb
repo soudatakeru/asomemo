@@ -1,6 +1,6 @@
 class Category < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: 'カテゴリー' },
     { id: 2, name: '初詣・新年会'},
     { id: 3, name: '節分'},
     { id: 4, name: 'ひな祭り'},
