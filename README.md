@@ -25,7 +25,34 @@ http://18.182.145.90/
 # 機能
 
 ## イベント投稿
+- 施設種類・規模・カテゴリーはセレクトボックスを使用し選択しやすくしています。
+  (https://gyazo.com/cd9fcd27bcf488d4ca9cd9173c809f83/raw)
+- タグは","で区切ることで複数つけることができます。
+  (https://gyazo.com/c487afba696b0066d02f6290b40884fe/raw)
+- 画像は選択するごとにフォームが追加され複数つけることができます
+  (https://gyazo.com/43c730eda44f77b1181a7ecdeb7e676e/raw)
+  
+## 検索機能
+- 検索機能は2種類あります。
+- タイトル・タグのキーワード検索。
+  (https://gyazo.com/4c25d89d42d7b5bd67c4e0ab5c07411d/raw)
+- 3つのセレクトボックスでの絞り込み検索。
+  (https://gyazo.com/e36b9a9ae05432a0715a8f2b9271affa/raw)
 
-  <img (https://gyazo.com/cd9fcd27bcf488d4ca9cd9173c809f83/raw) width=70%>  
+## お気に入り機能
+- イベント詳細ページの「お気に入りに追加」をクリックするとお気に入りに追加されます。
+- 追加されるとメッセージが表示されます。
+  (https://gyazo.com/e496e889991df0f77eabcb1ccde97b58/raw)
+- ヘッダーの「お気に入り」にアクセスするとリストが表示されます
+  (https://gyazo.com/6d7858a9db5e4888ed4ac7aa51c7f800/raw)
 
+# 注意点
+- 絞り込み検索機能は3つの選択肢が全て一致したもののみ表示されます
+
+# 今後の実装予定
+- 絞り込み検索機能を全て一致のみ表示から一部一致でも表示されるよう変更します
+
+# データベース設計
+  （https://gyazo.com/e0edc7856d06df0eda95069deba30e8f/raw)
+  (https://gyazo.com/8d3611674232bc7e80026c5c8f38de31/raw)
 
