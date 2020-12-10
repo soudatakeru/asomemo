@@ -26,6 +26,6 @@ http://18.182.145.90/
 
 ## イベント投稿
 
-  <img src="https://gyazo.com/cd9fcd27bcf488d4ca9cd9173c809f83" width=70%>  
+  <img (https://gyazo.com/cd9fcd27bcf488d4ca9cd9173c809f83/raw) width=70%>  
 
 
