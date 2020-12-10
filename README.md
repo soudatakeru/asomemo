@@ -1,77 +1,31 @@
-# テーブル設計
+# アプリケーション名
 
-   usersテーブル
+あそめも
 
-| Column            | Type   | Options                        |
-| nickname          | string | null: false                    |
-| email             | string | null:false, uniqueness: true   |
-|encrypted_password |string  | null: false                    |
+# アプリケーション概要
 
-    Association
+- 介護従事者のレクリエーション・イベントを共有することができる
 
-- has_many :events
-- has_many :favorites
-- has_many :comments
+# URL
+http://18.182.145.90/
 
-   eventsテーブル
+# テスト用アカウント
 
-| Column            | Type       | Options                        |
-| name              | string     | null: false                    |
-| explanation       | text       | null: false                    |
-| facility_id       | integer    | null: false                    |
-| scale_id          | integer    | null: false                    |
-| category_id       | integer    | null: false                    |
-| volunteer         | text       |                                |
-| user              | references | null: false: foreign_key: true |
+- ユーザーネーム・・・山田
+- Eメール・・・yamada@gmail.com
+- password・・・take3034
 
-    Association
+# 利用方法
+- テスト用アカウントでログインし、新規投稿からイベントを投稿してください。
+- ホーム画面に投稿されている画像をクリックすることで詳細ページへ移行します。
 
-- belongs_to :user
-- has_many   :favorite
-- has_many   :event_tag_relations
-- has_many   :comments
+# 解決した課題
+- 老人ホームに勤めてる方用のイベント投稿アプリを作成しました。老人ホームに勤めていると、季節の行事を担当することがあります。企画を立てる際自分一人でアイデアを出すのは大変です。 老人ホームのHPにアクセスすると行事の様子が書かれていることはありますが他の施設とくらべたりするときなどは毎回アクセスしなければならないため面倒です。そこで複数の施設から投稿されたイベントを見られるアプリを開発しました。これにより様々なイベントを簡単に共有することができます。。
 
-   commentsテーブル
+# 機能
 
-| Column            | Type       | Options                        |
-| comment           | text       | null: false                    |
-| user_id           | references | null: false: foreign_key: true |
-| event_id          | references | null: false: foreign_key: true |
+## イベント投稿
 
-    Association
-
-- belongs_to :user
-- belongs_to :event
-
-   favoriteテーブル
-    
-| Column            | Type       | Options                        |
-| user_id           | references | null: false: foreign_key: true |
-| event_id          | references | null: false: foreign_key: true |
-
-    Association
-
-- belongs_to :user
-- belongs_to :event
-
-   event_tag_relationsテーブル
-
-| Column            | Type       | Options                        |
-| event_id          | references | null: false: foreign_key: true |
-| tag_id            | references | null: false: foreign_key: true |
-
-    Association
-
-- belongs_to :event
-- belongs_to :tag
-
-   tagテーブル
-
-| Column            | Type       | Options                        |
-| name              | string     | null:false, uniqueness: true   |
-
-    Association
-
-- has_many :event_tag_relations
+  <img src="https://gyazo.com/cd9fcd27bcf488d4ca9cd9173c809f83" width=70%>  
 
 
