@@ -62,5 +62,5 @@ http://18.182.145.90/
 - ruby 2.6.5
 - gem tzinfo-data,devise,rails-i18n,factory_bot_rails,faker,pry-rails,mini_magick,image_processing,active_hash,ransack,aws-sdk-s3
 <p align="center">
- <a href="vue公式サイトURL"><img src="https://〜.c65a67974647b53ab5cdaedde9f4f536.png" width="80px;" /></a>
+ <a href="vue公式サイトURL"><img src="c65a67974647b53ab5cdaedde9f4f536.png" width="80px;" /></a>
 </p>
