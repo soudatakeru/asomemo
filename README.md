@@ -20,38 +20,54 @@ http://18.182.145.90/
 - ホーム画面に投稿されている画像をクリックすることで詳細ページへ移行します。
 
 # 解決した課題
-- 老人ホームに勤めてる方用のイベント投稿アプリを作成しました。老人ホームに勤めていると、季節の行事を担当することがあります。企画を立てる際自分一人でアイデアを出すのは大変です。 老人ホームのHPにアクセスすると行事の様子が書かれていることはありますが他の施設とくらべたりするときなどは毎回アクセスしなければならないため面倒です。そこで複数の施設から投稿されたイベントを見られるアプリを開発しました。これにより様々なイベントを簡単に共有することができます。。
+- 老人ホームに勤めてる方用のイベント投稿アプリを作成しました。老人ホームに勤めていると、季節の行事を担当することがあります。企画を立てる際自分一人でアイデアを出すのは大変です。 老人ホームのHPにアクセスすると行事の様子を見ることはできますが、他の施設と比べたりするときなどは毎回アクセスしなければならないため面倒です。そこで複数の施設から投稿されたイベントを見られるアプリを開発しました。これにより様々なイベントを簡単に共有することができます。
 
 # 機能
 - ホーム画面です
-  (https://gyazo.com/74373eaadcb5875b00ff1d143949a0d8/raw)
+  <a href="https://gyazo.com/ab6eafb0ce2b1d9a844557172efa6044"><img src="https://i.gyazo.com/ab6eafb0ce2b1d9a844557172efa6044.png" alt="Image from Gyazo" width="1171"/></a>
 ## イベント投稿
 - 施設種類・規模・カテゴリーはセレクトボックスを使用し選択しやすくしています。
-  (https://gyazo.com/cd9fcd27bcf488d4ca9cd9173c809f83/raw)
+  <a href="https://gyazo.com/5cb778352e8b75fadcdf1daba1b27e29"><img src="https://i.gyazo.com/5cb778352e8b75fadcdf1daba1b27e29.png" alt="Image from Gyazo" width="462"/></a>
 - タグは","で区切ることで複数つけることができます。
-  (https://gyazo.com/c487afba696b0066d02f6290b40884fe/raw)
+  <a href="https://gyazo.com/d324272f1d8c1e0466787a4d922974b2"><img src="https://i.gyazo.com/d324272f1d8c1e0466787a4d922974b2.png" alt="Image from Gyazo" width="523"/></a>
 - 画像は選択するごとにフォームが追加され複数つけることができます
-  (https://gyazo.com/43c730eda44f77b1181a7ecdeb7e676e/raw)
+  <a href="https://gyazo.com/fb7e11adcfd6460f2e837b783ff37147"><img src="https://i.gyazo.com/fb7e11adcfd6460f2e837b783ff37147.png" alt="Image from Gyazo" width="584"/></a>
+  
+## 詳細ページ
+- 投稿者本人にのみ編集・削除のリンクが表示されます
+
+## コメント機能
+- イベント詳細ページの下部より投稿できます
+  <a href="https://gyazo.com/5744e801c3d8eca4a7ba1124dc721e57"><img src="https://i.gyazo.com/5744e801c3d8eca4a7ba1124dc721e57.png" alt="Image from Gyazo" width="306"/></a>
+
+## マイページ
+- ヘッダーのマイページよりアクセスできます。
+  <a href="https://gyazo.com/417db70fe8dd2ac91c0d84e09ee2b0d3"><img src="https://i.gyazo.com/417db70fe8dd2ac91c0d84e09ee2b0d3.png" alt="Image from Gyazo" width="1117"/></a>
+- ログアウト状態ではトップページにリダイレクトされます。
+
   
 ## 検索機能
 - 検索機能は2種類あります。
 - タイトル・タグのキーワード検索。
-  (https://gyazo.com/4c25d89d42d7b5bd67c4e0ab5c07411d/raw)
 - 3つのセレクトボックスでの絞り込み検索。
-  (https://gyazo.com/e36b9a9ae05432a0715a8f2b9271affa/raw)
+  <a href="https://gyazo.com/5168caae6e5af559c43d8c4d84fadb5e"><img src="https://i.gyazo.com/5168caae6e5af559c43d8c4d84fadb5e.png" alt="Image from Gyazo" width="670"/></a>
 
 ## お気に入り機能
 - イベント詳細ページの「お気に入りに追加」をクリックするとお気に入りに追加されます。
-- 追加されるとメッセージが表示されます。
-  (https://gyazo.com/e496e889991df0f77eabcb1ccde97b58/raw)
 - ヘッダーの「お気に入り」にアクセスするとリストが表示されます
-  (https://gyazo.com/6d7858a9db5e4888ed4ac7aa51c7f800/raw)
+  <a href="https://gyazo.com/6687240d16831137acebf40bc560f74f"><img src="https://i.gyazo.com/6687240d16831137acebf40bc560f74f.png" alt="Image from Gyazo" width="457"/></a>
+- ログアウト状態ではトップページにリダイレクトされます。
+  
+## メッセージ
+- ユーザー登録・イベント投稿・編集・削除・お気に入り登録を行うとヘッダーにメッセージが表示されます
+　　（https://gyazo.com/32097da1193b80b3322d01a42e3c5b99/raw)
 
 # 注意点
 - 絞り込み検索機能は3つの選択肢が全て一致したもののみ表示されます
 
 # 今後の実装予定
 - 絞り込み検索機能を全て一致のみ表示から一部一致でも表示されるよう変更します
+- ヘッダーのメッセージを成功と失敗の時で色を分けるよう変更します。また所定の時間で消えるよう変更します
 
 # データベース設計
 - （https://gyazo.com/e0edc7856d06df0eda95069deba30e8f/raw)
