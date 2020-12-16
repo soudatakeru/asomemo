@@ -194,7 +194,7 @@ a {
   flex-direction: column;
   margin-bottom: 8px;
   border-left: solid 3px #FF6701;
-  border-right: solid 3px #FF6701;
+  border-right: solid 3px #FF6701; 
   word-break: break-word;
 }
 .detail__title{
@@ -225,6 +225,8 @@ a {
 
 .prototype__comments{
   background-color: #f6f6f6;
+  border: solid 3px #FF6701;
+  border-radius: 20px;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
@@ -456,8 +458,12 @@ textarea{
 .favorite{
   border: solid 3px #FF6701;
   border-radius: 5px;
-  width: 14%;
+  width: 8%;
+  margin: auto;
+  font-size: 8px;
+  text-align: center;
 }
+
 
 .favorite__main{
   width: 1024px;
@@ -466,4 +472,17 @@ textarea{
 
 .explanation{
   width: 100px;
+}
+
+.messege{
+  width: 100%;
+  background-color: darkolivegreen; 
+  color: #e0e0e0;
+  text-align: center;  
+}
+
+.events{
+  border: solid 3px #FF6701;
+  border-radius: 20px;
+  padding: 4px;
 }

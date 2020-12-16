@@ -17,8 +17,7 @@ class EventsController < ApplicationController
     tag_list = params[:event][:tag_ids].split(',')
     if @event.save
       @event.save_tags(tag_list)
-      flash[:success] = '投稿しました!'
-      redirect_to root_url
+      redirect_to root_url, notice: "イベントを投稿しました"
     else
       render 'new'
     end
@@ -55,8 +54,7 @@ class EventsController < ApplicationController
     tag_list = params[:event][:tag_names].to_s.split(',')
     if @event.update_attributes(event_params)
       @event.save_tags(tag_list)
-      flash[:success] = '投稿を編集しました‼'
-      redirect_to @event
+      redirect_to @event, notice: "イベントを編集しました"
     else
     render 'edit'
     end
@@ -65,7 +63,7 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     if @event.destroy
-      redirect_to root_path
+      redirect_to root_path, notice: "イベントを削除しました"
     end
   end
 

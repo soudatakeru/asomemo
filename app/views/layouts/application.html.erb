@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      $(function() {
+        setTimeout("$('.flash').fadeOut('slow')", 2000);
+      });
+   </script>
+    <div class="messege">
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: key) %>
+        <% end %>
+    </div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProtoSpace</title>
+    <title>Asomemo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>

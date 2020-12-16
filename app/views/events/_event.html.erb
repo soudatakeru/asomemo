@@ -1,15 +1,17 @@
 <div class="card">
-  <div class="event">
-    <%= link_to event.name, event_path(event.id), class: :card__title%>
-    <% event.images.each do |image| %>
-      <%= link_to image_tag(image, class: 'images'), event_path(event.id), class:  :home_image %>
-      <% break %>
-    <% end %>
-  </div>
-  <div class="card__body">
-    <% event.tags.each do |tag| %>
-      #<%= link_to tag.tag_name,event_path(event.id) %>
-    <% end %>
-    <%= link_to event.user.nickname, root_path, class: :card__user %>
+  <div link_to event_path(event.id), class="events">
+    <div class="event">
+      <%= link_to event.name, event_path(event.id), class: :card__title%>
+      <% event.images.each do |image| %>
+        <%= link_to image_tag(image, class: 'images'), event_path(event.id), class:  :home_image %>
+        <% break %>
+      <% end %>
+    </div>
+    <div class="card__body">
+      <% event.tags.each do |tag| %>
+        #<%= link_to tag.tag_name,event_path(event.id) %>
+      <% end %>
+      <%= link_to event.user.nickname, user_path(event.user), class: :card__user %>
+    </div>
   </div>
 </div>

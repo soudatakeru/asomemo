@@ -14,5 +14,4 @@ Rails.application.routes.draw do
   end
   resources :users, only: :show 
   resources :favorites, only: [:destroy, :index]
-  
 end

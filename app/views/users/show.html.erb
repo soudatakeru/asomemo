@@ -1,6 +1,7 @@
 <div class="main">
   <div class="inner">
     <div class="user__wrapper">
+      <%= render partial:'relationships/follow_button', user: @user %>
       <h2 class="page-heading">
         <%= "#{current_user.nickname}さんの情報"%>
       </h2>

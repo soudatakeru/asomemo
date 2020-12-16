@@ -2,14 +2,8 @@
   <div class="inner">
     <div class="prototype__wrapper">
       <div class="favorite">
-      <%= link_to "お気に入りに追加", add_event_path(@event), method: :post %>
-        
+          <%= link_to "お気に入り", add_event_path(@event), method: :post %>
       </div>
-        <%# <%= flash[:notice] %>
-        <%# <%= flash[:aleat] %> 
-        <% flash.each do |key, value| %>
-          <p><%= value %><p>
-        <% end %>
       <div class="prototype__hedding">
           <%= @event.name %>
       </div>
