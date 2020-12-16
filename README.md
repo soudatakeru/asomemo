@@ -29,7 +29,7 @@ http://18.182.145.90/
 - 施設種類・規模・カテゴリーはセレクトボックスを使用し選択しやすくしています。
   <a href="https://gyazo.com/5cb778352e8b75fadcdf1daba1b27e29"><img src="https://i.gyazo.com/5cb778352e8b75fadcdf1daba1b27e29.png" alt="Image from Gyazo" width="462"/></a>
 - タグは","で区切ることで複数つけることができます。
-  <a href="https://gyazo.com/d324272f1d8c1e0466787a4d922974b2"><img src="https://i.gyazo.com/d324272f1d8c1e0466787a4d922974b2.png" alt="Image from Gyazo" width="523"/></a>
+<a href="https://gyazo.com/d324272f1d8c1e0466787a4d922974b2"><img src="https://i.gyazo.com/d324272f1d8c1e0466787a4d922974b2.png" alt="Image from Gyazo" width="523"/></a>
 - 画像は選択するごとにフォームが追加され複数つけることができます
   <a href="https://gyazo.com/fb7e11adcfd6460f2e837b783ff37147"><img src="https://i.gyazo.com/fb7e11adcfd6460f2e837b783ff37147.png" alt="Image from Gyazo" width="584"/></a>
   
