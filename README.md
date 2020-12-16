@@ -27,38 +27,35 @@ http://18.182.145.90/
   <a href="https://gyazo.com/ab6eafb0ce2b1d9a844557172efa6044"><img src="https://i.gyazo.com/ab6eafb0ce2b1d9a844557172efa6044.png" alt="Image from Gyazo" width="1171"/></a>
 ## イベント投稿
 - 施設種類・規模・カテゴリーはセレクトボックスを使用し選択しやすくしています。
-  (https://gyazo.com/cd9fcd27bcf488d4ca9cd9173c809f83/raw)
+  <a href="https://gyazo.com/5cb778352e8b75fadcdf1daba1b27e29"><img src="https://i.gyazo.com/5cb778352e8b75fadcdf1daba1b27e29.png" alt="Image from Gyazo" width="462"/></a>
 - タグは","で区切ることで複数つけることができます。
-  (https://gyazo.com/c487afba696b0066d02f6290b40884fe/raw)
+  <a href="https://gyazo.com/d324272f1d8c1e0466787a4d922974b2"><img src="https://i.gyazo.com/d324272f1d8c1e0466787a4d922974b2.png" alt="Image from Gyazo" width="523"/></a>
 - 画像は選択するごとにフォームが追加され複数つけることができます
-  (https://gyazo.com/43c730eda44f77b1181a7ecdeb7e676e/raw)
+  <a href="https://gyazo.com/fb7e11adcfd6460f2e837b783ff37147"><img src="https://i.gyazo.com/fb7e11adcfd6460f2e837b783ff37147.png" alt="Image from Gyazo" width="584"/></a>
   
 ## 詳細ページ
-- ホーム画面に投稿されたイベントの画像やタイトルをクリックすることでアクセスできます
-  (https://gyazo.com/a9d7fdde6fb45b812ca04741ca58bfc3/raw)
 - 投稿者本人にのみ編集・削除のリンクが表示されます
 
 ## コメント機能
 - イベント詳細ページの下部より投稿できます
-  (https://gyazo.com/1c8cddfb61ed43abd2ce49dd24370b9a/raw)
+  <a href="https://gyazo.com/5744e801c3d8eca4a7ba1124dc721e57"><img src="https://i.gyazo.com/5744e801c3d8eca4a7ba1124dc721e57.png" alt="Image from Gyazo" width="306"/></a>
 
 ## マイページ
 - ヘッダーのマイページよりアクセスできます。
-  (https://gyazo.com/e622d2ad86e84b61cfa4bea3ac5a59d9/raw)
+  <a href="https://gyazo.com/417db70fe8dd2ac91c0d84e09ee2b0d3"><img src="https://i.gyazo.com/417db70fe8dd2ac91c0d84e09ee2b0d3.png" alt="Image from Gyazo" width="1117"/></a>
 - ログアウト状態ではトップページにリダイレクトされます。
 
   
 ## 検索機能
 - 検索機能は2種類あります。
 - タイトル・タグのキーワード検索。
-  (https://gyazo.com/4c25d89d42d7b5bd67c4e0ab5c07411d/raw)
 - 3つのセレクトボックスでの絞り込み検索。
-  (https://gyazo.com/e36b9a9ae05432a0715a8f2b9271affa/raw)
+  <a href="https://gyazo.com/5168caae6e5af559c43d8c4d84fadb5e"><img src="https://i.gyazo.com/5168caae6e5af559c43d8c4d84fadb5e.png" alt="Image from Gyazo" width="670"/></a>
 
 ## お気に入り機能
 - イベント詳細ページの「お気に入りに追加」をクリックするとお気に入りに追加されます。
 - ヘッダーの「お気に入り」にアクセスするとリストが表示されます
-  (https://gyazo.com/6d7858a9db5e4888ed4ac7aa51c7f800/raw)
+  <a href="https://gyazo.com/6687240d16831137acebf40bc560f74f"><img src="https://i.gyazo.com/6687240d16831137acebf40bc560f74f.png" alt="Image from Gyazo" width="457"/></a>
 - ログアウト状態ではトップページにリダイレクトされます。
   
 ## メッセージ
