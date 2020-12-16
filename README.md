@@ -60,7 +60,7 @@ http://18.182.145.90/
   
 ## メッセージ
 - ユーザー登録・イベント投稿・編集・削除・お気に入り登録を行うとヘッダーにメッセージが表示されます
-　　（https://gyazo.com/32097da1193b80b3322d01a42e3c5b99/raw)
+　　<a href="https://gyazo.com/4b386801f879013d605f4f060e3c12f5"><img src="https://i.gyazo.com/4b386801f879013d605f4f060e3c12f5.png" alt="Image from Gyazo" width="1219"/></a>
 
 # 注意点
 - 絞り込み検索機能は3つの選択肢が全て一致したもののみ表示されます
