@@ -36,6 +36,7 @@ http://18.182.145.90/
 
 ## コメント機能
 - イベント詳細ページの下部より投稿できます
+  <a href="https://gyazo.com/c8e8b7868d4b15dd4aa686f268f2b839"><img src="https://i.gyazo.com/c8e8b7868d4b15dd4aa686f268f2b839.png" alt="Image from Gyazo" width="1144"/></a>
 
 ## マイページ
 - ヘッダーのマイページよりアクセスできます。
