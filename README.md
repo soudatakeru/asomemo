@@ -29,15 +29,12 @@ http://18.182.145.90/
 - 施設種類・規模・カテゴリーはセレクトボックスを使用し選択しやすくしています。
 - タグは","で区切ることで複数つけることができます
 - 画像は選択するごとにフォームが追加され複数つけることができます
-  <a href="https://gyazo.com/5cb778352e8b75fadcdf1daba1b27e29"><img src="https://i.gyazo.com/5cb778352e8b75fadcdf1daba1b27e29.png" alt="Image from Gyazo" width="462"/></a>
-  <a href="https://gyazo.com/fb7e11adcfd6460f2e837b783ff37147"><img src="https://i.gyazo.com/fb7e11adcfd6460f2e837b783ff37147.png" alt="Image from Gyazo" width="584"/></a>
   
 ## 詳細ページ
 - 投稿者本人にのみ編集・削除のリンクが表示されます
 
 ## コメント機能
 - イベント詳細ページの下部より投稿できます
-  <a href="https://gyazo.com/5744e801c3d8eca4a7ba1124dc721e57"><img src="https://i.gyazo.com/5744e801c3d8eca4a7ba1124dc721e57.png" alt="Image from Gyazo" width="500"/></a>
 
 ## マイページ
 - ヘッダーのマイページよりアクセスできます。
