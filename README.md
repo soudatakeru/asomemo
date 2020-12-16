@@ -24,7 +24,7 @@ http://18.182.145.90/
 
 # 機能
 - ホーム画面です
-  (https://gyazo.com/74373eaadcb5875b00ff1d143949a0d8/raw)
+  <a href="https://gyazo.com/ab6eafb0ce2b1d9a844557172efa6044"><img src="https://i.gyazo.com/ab6eafb0ce2b1d9a844557172efa6044.png" alt="Image from Gyazo" width="1171"/></a>
 ## イベント投稿
 - 施設種類・規模・カテゴリーはセレクトボックスを使用し選択しやすくしています。
   (https://gyazo.com/cd9fcd27bcf488d4ca9cd9173c809f83/raw)
