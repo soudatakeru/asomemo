@@ -24,7 +24,7 @@ http://18.182.145.90/
 
 # 機能
 - ホーム画面です
-  <a href="https://gyazo.com/ab6eafb0ce2b1d9a844557172efa6044"><img src="https://i.gyazo.com/ab6eafb0ce2b1d9a844557172efa6044.png" alt="Image from Gyazo" width="1171"/></a>
+  <a href="https://gyazo.com/3a66042e8ecaedd1a9e0b75af30926f0"><img src="https://i.gyazo.com/3a66042e8ecaedd1a9e0b75af30926f0.jpg" alt="Image from Gyazo" width="1204"/></a>
 ## イベント投稿
 - 施設種類・規模・カテゴリーはセレクトボックスを使用し選択しやすくしています。
   <a href="https://gyazo.com/5cb778352e8b75fadcdf1daba1b27e29"><img src="https://i.gyazo.com/5cb778352e8b75fadcdf1daba1b27e29.png" alt="Image from Gyazo" width="462"/></a>
@@ -55,7 +55,7 @@ http://18.182.145.90/
 ## お気に入り機能
 - イベント詳細ページの「お気に入りに追加」をクリックするとお気に入りに追加されます。
 - ヘッダーの「お気に入り」にアクセスするとリストが表示されます
-  <a href="https://gyazo.com/6687240d16831137acebf40bc560f74f"><img src="https://i.gyazo.com/6687240d16831137acebf40bc560f74f.png" alt="Image from Gyazo" width="457"/></a>
+  <a href="https://gyazo.com/3811f950695efa44f01090b55669ff3d"><img src="https://i.gyazo.com/3811f950695efa44f01090b55669ff3d.png" alt="Image from Gyazo" width="1186"/></a>
 - ログアウト状態ではトップページにリダイレクトされます。
   
 ## メッセージ
