@@ -10,7 +10,7 @@
 http://18.182.145.90/
 
 # テスト用アカウント
-
+- ホーム左上の「ゲストログイン（閲覧用）」にてゲストとしてログインできます
 - ユーザーネーム・・・山田
 - Eメール・・・yamada@gmail.com
 - password・・・take3034
@@ -24,21 +24,19 @@ http://18.182.145.90/
 
 # 機能
 - ホーム画面です
-  <a href="https://gyazo.com/ab6eafb0ce2b1d9a844557172efa6044"><img src="https://i.gyazo.com/ab6eafb0ce2b1d9a844557172efa6044.png" alt="Image from Gyazo" width="1171"/></a>
+  <a href="https://gyazo.com/3a66042e8ecaedd1a9e0b75af30926f0"><img src="https://i.gyazo.com/3a66042e8ecaedd1a9e0b75af30926f0.jpg" alt="Image from Gyazo" width="1204"/></a>
 ## イベント投稿
 - 施設種類・規模・カテゴリーはセレクトボックスを使用し選択しやすくしています。
-  <a href="https://gyazo.com/5cb778352e8b75fadcdf1daba1b27e29"><img src="https://i.gyazo.com/5cb778352e8b75fadcdf1daba1b27e29.png" alt="Image from Gyazo" width="462"/></a>
-- タグは","で区切ることで複数つけることができます。
-  <a href="https://gyazo.com/d324272f1d8c1e0466787a4d922974b2"><img src="https://i.gyazo.com/d324272f1d8c1e0466787a4d922974b2.png" alt="Image from Gyazo" width="523"/></a>
+- タグは","で区切ることで複数つけることができます
 - 画像は選択するごとにフォームが追加され複数つけることができます
-  <a href="https://gyazo.com/fb7e11adcfd6460f2e837b783ff37147"><img src="https://i.gyazo.com/fb7e11adcfd6460f2e837b783ff37147.png" alt="Image from Gyazo" width="584"/></a>
+  <a href="https://gyazo.com/cb809b298d7a5c260e8c01699e36db7d"><img src="https://i.gyazo.com/cb809b298d7a5c260e8c01699e36db7d.png" alt="Image from Gyazo" width="661"/></a>
   
 ## 詳細ページ
 - 投稿者本人にのみ編集・削除のリンクが表示されます
 
 ## コメント機能
 - イベント詳細ページの下部より投稿できます
-  <a href="https://gyazo.com/5744e801c3d8eca4a7ba1124dc721e57"><img src="https://i.gyazo.com/5744e801c3d8eca4a7ba1124dc721e57.png" alt="Image from Gyazo" width="306"/></a>
+  <a href="https://gyazo.com/c8e8b7868d4b15dd4aa686f268f2b839"><img src="https://i.gyazo.com/c8e8b7868d4b15dd4aa686f268f2b839.png" alt="Image from Gyazo" width="1144"/></a>
 
 ## マイページ
 - ヘッダーのマイページよりアクセスできます。
@@ -55,12 +53,12 @@ http://18.182.145.90/
 ## お気に入り機能
 - イベント詳細ページの「お気に入りに追加」をクリックするとお気に入りに追加されます。
 - ヘッダーの「お気に入り」にアクセスするとリストが表示されます
-  <a href="https://gyazo.com/6687240d16831137acebf40bc560f74f"><img src="https://i.gyazo.com/6687240d16831137acebf40bc560f74f.png" alt="Image from Gyazo" width="457"/></a>
+  <a href="https://gyazo.com/3811f950695efa44f01090b55669ff3d"><img src="https://i.gyazo.com/3811f950695efa44f01090b55669ff3d.png" alt="Image from Gyazo" width="1186"/></a>
 - ログアウト状態ではトップページにリダイレクトされます。
   
 ## メッセージ
 - ユーザー登録・イベント投稿・編集・削除・お気に入り登録を行うとヘッダーにメッセージが表示されます
-　　（https://gyazo.com/32097da1193b80b3322d01a42e3c5b99/raw)
+　　<a href="https://gyazo.com/4b386801f879013d605f4f060e3c12f5"><img src="https://i.gyazo.com/4b386801f879013d605f4f060e3c12f5.png" alt="Image from Gyazo" width="1219"/></a>
 
 # 注意点
 - 絞り込み検索機能は3つの選択肢が全て一致したもののみ表示されます
