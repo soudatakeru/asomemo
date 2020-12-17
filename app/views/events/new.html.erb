@@ -40,7 +40,7 @@
           </div>
 
           <div class="field">
-            <label class="label">画像</label>
+            <label class="label">画像(任意)</label>
               <%= f.file_field :images, name: 'event[images][]', id: 'event_image', class:"select-box-image" %> 
               <div id="image-list"></div>
           </div>
@@ -48,13 +48,8 @@
 
           <div class="actions">
             <%= f.submit "保存する", class: :form__btn  %>
-    
           </div>
          <% end %>
-         <%# <% @event.images.each do |image| %>
-           <%#= image_tag image, class: 'images' %>
-         <%# <% end %> 
-        <%# 部分テンプレートでフォームを表示する %>
     </div>
   </div>
 </div>

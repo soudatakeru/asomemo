@@ -39,7 +39,6 @@
           <%= link_to "削除する", event_path(@event.id), method:  :delete, class: :prototype__btn %>
         </div>
       <% end %>
-      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
       <div class="prototype__image">
         <% @event.images.each do |image| %>
           <%= image_tag image, class:  :home_image %>
@@ -55,7 +54,6 @@
       </div>
       <div class="prototype__comments">
         <% if user_signed_in? %>
-        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
            <%= form_with model: [@event, @comment], local: true do |f|%>
             <div class="field">
                <%= f.label "コメント" %><br />
@@ -66,17 +64,14 @@
             </div>
            <% end %> 
         <% end %> 
-        <%# // ログインしているユーザーには上記を表示する %>
         <ul class="comments_lists">
         <%=  @comments %>
           <% @comments.each do |comment| %>
-          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
             <li class="comments_list">
               <%= comment.text %>
               <%= link_to comment.user.nickname, user_path(comment.user), class: :comment_user %>
           <% end%>
             </li>
-          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
         </ul>
       </div>
     </div>

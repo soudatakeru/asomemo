@@ -11,7 +11,6 @@ class Event < ApplicationRecord
   has_many :favorites
   has_many :users, through: :favorites
 
-
   with_options presence: true do
     validates :name
     validates :explanation
@@ -19,34 +18,33 @@ class Event < ApplicationRecord
     validates :scale_id
     validates :category_id
   end
-   with_options numericality: { other_than: 1 } do
+  with_options numericality: { other_than: 1 } do
     validates :facility_id
     validates :scale_id
     validates :category_id
   end
 
   def save_tags(saveevent_tags)
-    current_tags = self.tags.pluck(:tag_name) unless self.tags.nil?
+    current_tags = tags.pluck(:tag_name) unless tags.nil?
     old_tags = current_tags - saveevent_tags
     new_tags = saveevent_tags - current_tags
 
     old_tags.each do |old_name|
-      self.tags.delete Tag.find_by(tag_name: old_name)
+      tags.delete Tag.find_by(tag_name: old_name)
     end
 
     new_tags.each do |new_name|
       micropost_tag = Tag.find_or_create_by(tag_name: new_name)
-      self.tags << micropost_tag
+      tags << micropost_tag
     end
   end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Event.joins(:tags).where('name LIKE ? OR tag_name LIKE ?', "%#{search}%", "%#{search}%")
-      #binding.pry
+      # binding.pry
     else
       Event.all
     end
   end
 end
-
