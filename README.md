@@ -74,4 +74,6 @@ http://18.182.145.90/
 # 動作方法
 - ローカル環境にてcd copysのディレクトリに移動し、http://localhost:3000/　 にアクセスしてください
 - ruby 2.6.5
+- AWSにてデプロイ
+- S3にて画像を保存
 - gem tzinfo-data,devise,rails-i18n,factory_bot_rails,faker,pry-rails,mini_magick,image_processing,active_hash,ransack,aws-sdk-s3
